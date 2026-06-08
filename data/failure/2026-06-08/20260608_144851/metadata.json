@@ -1,0 +1,33 @@
+{
+  "cameras_enabled": false,
+  "cameras": {},
+  "collection_flow": "droid_style_xbox",
+  "task": "无相机遥操作测试",
+  "current_task": "无相机遥操作测试",
+  "operator": "",
+  "scene_id": "",
+  "robot": {
+    "name": "Lingzu EL-A3",
+    "dof": 6,
+    "gripper": "angle_controlled",
+    "can_name": "can0",
+    "backend": "socketcan"
+  },
+  "controller": {
+    "type": "xbox",
+    "profile": "zikway_3537_1041",
+    "device": "/dev/input/js0"
+  },
+  "sample_rate_hz": 15.0,
+  "teleop_rate_hz": 100.0,
+  "control_mode": "interactive_keyboard_episode",
+  "episode_index_in_session": 1,
+  "session_started_at": "2026-06-08 14:48:51",
+  "closed_reason": "session_shutdown",
+  "success": false,
+  "failure": true,
+  "num_samples": 682,
+  "duration_s": 45.44800340398797,
+  "episode_name": "20260608_144851",
+  "trajectory_path": "trajectory.jsonl"
+}

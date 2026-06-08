@@ -1,0 +1,23 @@
+robot:
+  can_name: can0
+  backend: socketcan
+  host_can_id: 253
+  default_kp: 80.0
+  default_kd: 4.0
+  control_rate_hz: 200.0
+  gravity_feedforward_ratio: 1.0
+
+xbox:
+  device: /dev/input/js0
+  profile: auto
+  update_rate_hz: 100.0
+  max_linear_velocity: 0.15
+  max_angular_velocity: 1.5
+  input_smoothing: 0.35
+  filter_omega: 14.0
+  max_joint_velocity: 1.5
+  max_ik_jump: 0.5
+
+recording:
+  sample_rate_hz: 20.0
+  output_dir: recordings

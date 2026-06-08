@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lingzu-teleop-platform"
+version = "0.1.0"
+description = "Teleoperation, trajectory recording, and dataset adapters for Lingzu EL-A3 arms."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [{ name = "Lingzu Teleop Team" }]
+dependencies = [
+    "imageio>=2.34",
+    "imageio-ffmpeg>=0.5",
+    "numpy>=1.24,<2.4",
+    "opencv-python>=4.8",
+    "pandas>=2.0",
+    "pillow>=10.0",
+    "pyarrow>=15.0",
+    "pyyaml>=6.0",
+    "pyserial>=3.5",
+    "pin",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lingzu_teleop*"]
+
+[tool.setuptools.package-data]
+"lingzu_teleop.sdk" = [
+    "resources/config/*",
+    "resources/meshes/*.stl",
+    "resources/rs05/config/*",
+    "resources/rs05/urdf/*.urdf",
+    "resources/urdf/*.urdf",
+]

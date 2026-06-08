@@ -1,0 +1,3 @@
+from lingzu_teleop.lerobot_teleoperator_lingzu_xbox.config_lingzu_xbox import LingzuXboxTeleoperatorConfig
+
+__all__ = ["LingzuXboxTeleoperatorConfig"]
