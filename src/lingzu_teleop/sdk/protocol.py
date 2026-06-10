@@ -10,6 +10,7 @@ EL-A3 SDK 协议定义
 
 from enum import IntEnum
 import logging
+import math
 
 
 class LogLevel(IntEnum):
@@ -199,5 +200,5 @@ DEFAULT_JOINT_LIMITS = {
     4: (-1.0472 , 1.5708),    # L4: -60°~90°
     5: (-1.5708, 1.5708),    # L5: ±90°
     6: (-1.5708, 1.5708),    # L6: ±90°
-    7: (-1.5708, 1.5708),    # L7: ±90° (Gripper)
+    7: (0.0, math.radians(108.5)),  # L7: 0°~108.5° (Gripper)
 }

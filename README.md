@@ -158,6 +158,7 @@ data/
 
 - `observation`：7 维关节状态、关节速度、力矩、末端位姿和机械臂状态码
 - `action`：最近一次 Xbox 遥操作发送给机械臂的 7 维动作，包含夹爪角度
+- 夹爪角度范围：`0°~108.5°`，对应 `0~1.893682 rad`
 - `camera_refs`：`wrist` / `front` 图像文件相对路径
 - `camera_metadata`：相机时间戳、frame number、内参等信息
 - `controller_info`：手柄 profile、是否有有效动作、是否请求退出

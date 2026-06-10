@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from typing import Sequence
 
 import numpy as np
+
+GRIPPER_CLOSE_LIMIT_RAD = math.radians(108.5)
 
 
 @dataclass
@@ -12,7 +15,7 @@ class SafetyLimits:
         default_factory=lambda: [-2.79, 0.0, -4.01, -1.57, -1.57, -1.57, 0.0]
     )
     joint_upper: list[float] = field(
-        default_factory=lambda: [2.79, 3.67, 0.0, 1.57, 1.57, 1.57, 1.5708]
+        default_factory=lambda: [2.79, 3.67, 0.0, 1.57, 1.57, 1.57, GRIPPER_CLOSE_LIMIT_RAD]
     )
     max_joint_step: float = 0.08
     max_gripper_step: float = 0.12
